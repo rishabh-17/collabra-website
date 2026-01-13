@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Primary Colors - Deep Professional Blue */
+        --color-primary: #0D2A4A;
+        /* Deep Professional Blue - trust and stability */
+        --color-primary-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        /* Secondary Colors - Sophisticated Teal */
+        --color-secondary: #2FA4A9;
+        /* Sophisticated Teal - innovation highlights */
+        --color-secondary-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        /* Accent Colors */
+        --color-accent: #1B5E20;
+        /* green-800 - success states and positive outcomes */
+        --color-accent-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        /* Background Colors */
+        --color-background: #FAFBFC;
+        /* gray-50 - clean canvas for complex information */
+        --color-foreground: #1A1D23;
+        /* gray-900 - maximum readability for detailed content */
+
+        /* Surface Colors */
+        --color-card: #FFFFFF;
+        /* white - content cards and elevated surfaces */
+        --color-card-foreground: #1A1D23;
+        /* gray-900 - card text color */
+
+        --color-popover: #FFFFFF;
+        /* white - dropdown and popover backgrounds */
+        --color-popover-foreground: #1A1D23;
+        /* gray-900 - popover text color */
+
+        /* Muted Colors */
+        --color-muted: #F5F7FA;
+        /* gray-100 - subtle content separation */
+        --color-muted-foreground: #4A5568;
+        /* gray-600 - clear hierarchy without harsh contrast */
+
+        /* Border and Input */
+        --color-border: #E2E8F0;
+        /* gray-200 - minimal borders for form inputs */
+        --color-input: #E2E8F0;
+        /* gray-200 - input field borders */
+        --color-ring: #2FA4A9;
+        /* Sophisticated Teal - focus ring color */
+
+        /* Semantic Colors */
+        --color-success: #2E7D32;
+        /* green-700 - confident positive reinforcement */
+        --color-success-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        --color-warning: #F57C00;
+        /* orange-700 - professional urgency without alarm */
+        --color-warning-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        --color-error: #C62828;
+        /* red-700 - clear concern with helpful intent */
+        --color-error-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        --color-destructive: #C62828;
+        /* red-700 - destructive actions */
+        --color-destructive-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        /* Conversion Accent */
+        --color-conversion: #FF6B35;
+        /* orange-500 - CTA urgency and action orientation */
+        --color-conversion-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        /* Trust Builder */
+        --color-trust: #34495E;
+        /* slate-700 - credibility messaging and testimonials */
+        --color-trust-foreground: #FFFFFF;
+        /* white - ensures WCAG AA contrast */
+
+        /* Radius */
+        --radius: 0.5rem;
+        /* 8px - consistent border radius */
+    }
+
+    .dark {
+        --color-background: #0A0A0A;
+        /* gray-950 - dark mode background */
+        --color-foreground: #FAFBFC;
+        /* gray-50 - dark mode text */
+
+        --color-card: #1A1D23;
+        /* gray-900 - dark mode cards */
+        --color-card-foreground: #FAFBFC;
+        /* gray-50 - dark mode card text */
+
+        --color-popover: #1A1D23;
+        /* gray-900 - dark mode popovers */
+        --color-popover-foreground: #FAFBFC;
+        /* gray-50 - dark mode popover text */
+
+        --color-muted: #1F2937;
+        /* gray-800 - dark mode muted backgrounds */
+        --color-muted-foreground: #9CA3AF;
+        /* gray-400 - dark mode muted text */
+
+        --color-border: #374151;
+        /* gray-700 - dark mode borders */
+        --color-input: #374151;
+        /* gray-700 - dark mode input borders */
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    code,
+    pre {
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+    }
+}
+
+@layer components {
+
+    /* Header Styles */
+    .header {
+        @apply fixed top-0 left-0 right-0 z-50 bg-card shadow-md;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .header-container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .header-content {
+        @apply flex items-center justify-between h-16;
+    }
+
+    .header-logo {
+        @apply flex items-center space-x-2;
+    }
+
+    .header-logo-icon {
+        @apply w-10 h-10 rounded-lg flex items-center justify-center;
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .header-logo-icon:hover {
+        transform: scale(1.05);
+    }
+
+    .header-logo-text {
+        @apply text-xl font-bold text-foreground;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .header-nav {
+        @apply hidden lg:flex items-center space-x-1;
+    }
+
+    .header-nav-item {
+        @apply px-4 py-2 text-sm font-medium text-muted-foreground rounded-md transition-all duration-300;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .header-nav-item:hover {
+        @apply text-foreground bg-muted;
+    }
+
+    .header-nav-item.active {
+        @apply text-primary;
+    }
+
+    .header-actions {
+        @apply flex items-center space-x-4;
+    }
+
+    .header-cta {
+        @apply hidden sm:inline-flex;
+    }
+
+    .mobile-menu-button {
+        @apply lg:hidden inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors duration-300;
+    }
+
+    /* Mobile Menu Styles */
+    .mobile-menu {
+        @apply lg:hidden bg-card border-t border-border;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .mobile-menu-container {
+        @apply px-4 py-6 space-y-3;
+    }
+
+    .mobile-menu-item {
+        @apply block px-4 py-3 text-base font-medium text-muted-foreground rounded-md transition-all duration-300;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .mobile-menu-item:hover {
+        @apply text-foreground bg-muted;
+    }
+
+    .mobile-menu-item.active {
+        @apply text-primary;
+    }
+
+    .mobile-menu-cta {
+        @apply mt-4 w-full;
+    }
+
+    /* Utility Classes */
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .shadow-subtle {
+        box-shadow: 0 4px 12px rgba(13, 42, 74, 0.08);
+    }
+
+    .shadow-elevated {
+        box-shadow: 0 8px 24px rgba(13, 42, 74, 0.12);
+    }
+
+    .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}
+
+@layer utilities {
+    .animation-delay-100 {
+        animation-delay: 100ms;
+    }
+
+    .animation-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .animation-delay-300 {
+        animation-delay: 300ms;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 400ms;
+    }
+
+    .animation-delay-500 {
+        animation-delay: 500ms;
+    }
+}
