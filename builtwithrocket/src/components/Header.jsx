@@ -7,6 +7,7 @@ const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     // Updated navigation items to match the design reference
     const navigationItems = [
@@ -28,6 +29,17 @@ const Header = () => {
         };
     }, [isMobileMenuOpen]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const handleNavigation = (path) => {
         navigate(path);
         setIsMobileMenuOpen(false);
@@ -41,10 +53,12 @@ const Header = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const headerBgClass = isScrolled || isMobileMenuOpen ? 'bg-[#063453]/95 backdrop-blur-sm shadow-lg' : 'bg-transparent';
+
     return (
-        <header className="sticky top-0 z-50 w-full bg-[#0D2A4A] shadow-md">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBgClass}`}>
+            <div className="max-w-6xl mx-auto px-6 py-4">
+                <div className="flex items-center justify-between">
                     {/* Logo Section */}
                     <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => handleNavigation('/')}>
                         <span className="text-2xl font-bold text-white tracking-tight">
@@ -53,14 +67,14 @@ const Header = () => {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center space-x-8">
+                    <nav className="hidden md:flex items-center gap-8">
                         {navigationItems?.map((item) => (
                             <button
                                 key={item?.path}
                                 onClick={() => handleNavigation(item?.path)}
                                 className={`text-base font-medium transition-colors duration-200 ${isActivePath(item?.path)
                                     ? 'text-[#2FA4A9]'
-                                    : 'text-white hover:text-[#2FA4A9]/80'
+                                    : 'text-white/80 hover:text-[#2FA4A9]'
                                     }`}
                             >
                                 {item?.label}
@@ -69,10 +83,10 @@ const Header = () => {
                     </nav>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden md:flex items-center ml-8">
+                    <div className="hidden md:flex items-center gap-3">
                         <Button
                             onClick={() => handleNavigation('/contact')}
-                            className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-200 shadow-lg border-0"
+                            className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-medium rounded-lg px-6 py-2.5 shadow-lg border-0"
                         >
                             Schedule a Call
                         </Button>
@@ -94,7 +108,7 @@ const Header = () => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-[#0D2A4A] border-t border-white/10 absolute w-full left-0 shadow-xl">
+                <div className="md:hidden bg-[#041B2E] border-t border-white/10 absolute w-full left-0 shadow-xl">
                     <div className="px-4 pt-2 pb-6 space-y-1">
                         {navigationItems?.map((item) => (
                             <button
