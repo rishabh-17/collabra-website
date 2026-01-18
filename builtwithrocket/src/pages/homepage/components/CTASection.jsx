@@ -72,9 +72,9 @@ const CTASection = () => {
                                 >
                                     Request a Free System Stability & Automation Audit
                                 </Button>
-                                <p className="text-xs md:text-sm text-white/80">
+                                {/* <p className="text-xs md:text-sm text-white/80">
                                     Best for teams with existing systems and something to lose if they fail.
-                                </p>
+                                </p> */}
                             </div>
                         </div>
 

@@ -13,10 +13,11 @@ const Header = () => {
 
     // Updated navigation items to match the design reference
     const navigationItems = [
+        { label: 'About', path: '/about' },
         { label: 'Services', path: '/services' },
         { label: 'Insights', path: '/insights' },
         { label: 'Case Studies', path: '/case-studies' },
-        { label: 'Contact', path: '/contact' },
+        // { label: 'Contact', path: '/contact' },
     ];
 
     useEffect(() => {

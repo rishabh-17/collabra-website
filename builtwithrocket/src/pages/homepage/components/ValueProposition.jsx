@@ -132,12 +132,12 @@ const ValuePropositionSection = () => {
                         <Button
                             variant="outline"
                             size="lg"
-                            onClick={() => navigate('/approach')}
+                            onClick={() => navigate('/about')}
                             iconName="ArrowRight"
                             iconPosition="right"
                             className="border-white/30 text-white hover:bg-white/10"
                         >
-                            Learn Our Approach
+                            Learn About Us
                         </Button>
                     </div>
                 </div>
