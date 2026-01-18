@@ -6,6 +6,7 @@ import NotFound from "pages/NotFound";
 import Homepage from "./pages/homepage";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyQualifyde from "./pages/CaseStudyQualifyde";
 import CaseStudyMicrosoftAttNike from "./pages/CaseStudyMicrosoftAttNike";
@@ -27,6 +28,7 @@ const Routes = () => {
                     <Route path="/homepage" element={<Homepage />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/contact" element={<Contact />} />
                     <Route path="/insights" element={<Insights />} />
                     <Route path="/case-studies" element={<CaseStudies />} />
                     <Route path="/case-studies/qualifyde" element={<CaseStudyQualifyde />} />

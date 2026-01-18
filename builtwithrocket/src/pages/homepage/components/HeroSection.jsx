@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const HeroSection = () => {
-    const navigate = useNavigate();
+    const { openDrawer } = useContactDrawer();
     const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
     return (
@@ -39,7 +39,13 @@ const HeroSection = () => {
                         size="lg"
                         className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-[#041B2E] text-lg px-8 py-6 rounded-lg group shadow-elevated"
                     >
-                        <a href="#contact" onClick={(e) => { e.preventDefault(); navigate('/contact'); }}>
+                        <a
+                            href="#contact"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                openDrawer();
+                            }}
+                        >
                             Schedule a Discovery Call
                             <Icon
                                 name="ArrowRight"

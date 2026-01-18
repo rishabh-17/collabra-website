@@ -329,7 +329,7 @@ const CaseStudyQualifyde = () => {
                                             </Button>
 
                                             <p className="text-xs text-[#4A5568] text-center mt-2">
-                                                We typically respond within 24–48 hours.
+                                                We typically respond within 24 hours.
                                             </p>
                                         </div>
                                     </div>

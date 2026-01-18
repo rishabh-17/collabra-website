@@ -2,17 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Icon from '../components/AppIcon';
 import Button from '../components/ui/Button';
+import { useContactDrawer } from '../components/ContactDrawerProvider';
 
 const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { openDrawer } = useContactDrawer();
 
     // Updated navigation items to match the design reference
     const navigationItems = [
         { label: 'Services', path: '/services' },
-        { label: 'Approach', path: '/approach' },
+        { label: 'Insights', path: '/insights' },
         { label: 'Case Studies', path: '/case-studies' },
         { label: 'Contact', path: '/contact' },
     ];
@@ -41,6 +43,11 @@ const Header = () => {
     }, []);
 
     const handleNavigation = (path) => {
+        if (path === '/contact') {
+            openDrawer();
+            setIsMobileMenuOpen(false);
+            return;
+        }
         navigate(path);
         setIsMobileMenuOpen(false);
     };
@@ -85,7 +92,7 @@ const Header = () => {
                     {/* Desktop CTA Button */}
                     <div className="hidden md:flex items-center gap-3">
                         <Button
-                            onClick={() => handleNavigation('/contact')}
+                            onClick={openDrawer}
                             className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-medium rounded-lg px-6 py-2.5 shadow-lg border-0"
                         >
                             Schedule a Call
@@ -125,7 +132,10 @@ const Header = () => {
                         <div className="pt-4 px-3">
                             <Button
                                 fullWidth
-                                onClick={() => handleNavigation('/contact')}
+                                onClick={() => {
+                                    openDrawer();
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-medium justify-center py-3"
                             >
                                 Schedule a Call

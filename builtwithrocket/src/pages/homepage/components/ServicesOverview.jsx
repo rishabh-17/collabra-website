@@ -1,10 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const ServicesOverviewSection = () => {
-    const navigate = useNavigate();
+    const { openDrawer } = useContactDrawer();
 
     const services = [
         {
@@ -103,7 +103,7 @@ const ServicesOverviewSection = () => {
                     <Button
                         variant="default"
                         size="lg"
-                        onClick={() => navigate('/contact')}
+                        onClick={openDrawer}
                         iconName="MessageSquare"
                         iconPosition="left"
                         className="bg-[#0D2A4A] hover:bg-[#0D2A4A]/90 text-white"

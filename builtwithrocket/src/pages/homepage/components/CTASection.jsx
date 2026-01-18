@@ -1,10 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const CTASection = () => {
-    const navigate = useNavigate();
+    const { openDrawer } = useContactDrawer();
 
     const benefits = [
         {
@@ -58,7 +58,7 @@ const CTASection = () => {
                                 <Button
                                     variant="default"
                                     size="lg"
-                                    onClick={() => navigate('/contact')}
+                                    onClick={openDrawer}
                                     iconName="Calendar"
                                     iconPosition="left"
                                     className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white shadow-elevated"

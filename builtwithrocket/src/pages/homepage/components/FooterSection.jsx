@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
+import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const FooterSection = () => {
     const navigate = useNavigate();
+    const { openDrawer } = useContactDrawer();
     const currentYear = new Date()?.getFullYear();
 
     const footerLinks = {
@@ -70,7 +72,13 @@ const FooterSection = () => {
                             {footerLinks?.company?.map((link) => (
                                 <li key={link?.label}>
                                     <button
-                                        onClick={() => navigate(link?.path)}
+                                        onClick={() => {
+                                            if (link?.path === "/contact") {
+                                                openDrawer();
+                                                return;
+                                            }
+                                            navigate(link?.path);
+                                        }}
                                         className="text-sm md:text-base text-white/70 hover:text-[#2FA4A9] transition-colors duration-300"
                                     >
                                         {link?.label}

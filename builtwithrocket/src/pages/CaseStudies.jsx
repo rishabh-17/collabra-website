@@ -11,9 +11,11 @@ import {
 import Header from "../components/Header";
 import FooterSection from "./homepage/components/FooterSection";
 import Button from "components/ui/Button";
+import { useContactDrawer } from "../components/ContactDrawerProvider";
 
 const CaseStudies = () => {
     const navigate = useNavigate();
+    const { openDrawer } = useContactDrawer();
 
     // ✅ Dummy images (Unsplash) - premium looking
     const images = [
@@ -218,7 +220,7 @@ const CaseStudies = () => {
                                                 {study.description}
                                             </p>
 
-                                            <div className="mt-5 flex items-center justify-between gap-4">
+                                            <div className="mt-5 flex items-center justify-end gap-4">
                                                 <Button
                                                     size="sm"
                                                     onClick={() => navigate(study.path)}
@@ -226,14 +228,6 @@ const CaseStudies = () => {
                                                 >
                                                     View Case Study
                                                 </Button>
-
-                                                <button
-                                                    onClick={() => navigate(study.path)}
-                                                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#0D2A4A] hover:text-[#2FA4A9] transition"
-                                                >
-                                                    Learn more
-                                                    <ArrowRight className="h-4 w-4" />
-                                                </button>
                                             </div>
                                         </div>
 
@@ -269,7 +263,7 @@ const CaseStudies = () => {
                                 <div className="flex flex-col sm:flex-row gap-3">
                                     <Button
                                         size="lg"
-                                        onClick={() => navigate("/contact")}
+                                        onClick={openDrawer}
                                         className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-semibold px-6 py-3 rounded-xl shadow-md"
                                     >
                                         Schedule a Discovery Call
