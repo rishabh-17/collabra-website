@@ -60,13 +60,13 @@ const ClientLogoSection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8 md:mb-12 lg:mb-16">
                     <div className="inline-flex items-center space-x-2 bg-[#2FA4A9]/10 px-4 py-2 rounded-full mb-4">
-                        <span className="text-sm md:text-base font-semibold text-[#0D2A4A]">Trusted by Industry Leaders</span>
+                        <span className="text-sm md:text-base font-semibold text-[#0D2A4A]">Trusted by teams worldwide</span>
                     </div>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0D2A4A] mb-3 md:mb-4">
-                        Powering Innovation for Global Brands
+                        Trusted by teams building and operating business-critical systems
                     </h2>
                     <p className="text-base md:text-lg text-[#4A5568] max-w-2xl mx-auto">
-                        Join the companies that trust us to deliver dependable, results-driven technology solutions
+                        Microsoft · SAP · Thomson Reuters · Nike · AT&amp;T · Telefónica · Volkswagen · Obopay
                     </p>
                 </div>
 

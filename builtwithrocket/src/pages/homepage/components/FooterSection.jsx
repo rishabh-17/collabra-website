@@ -24,8 +24,8 @@ const FooterSection = () => {
         resources: [
             { label: "Blog", path: "/resources" },
             { label: "Insights", path: "/resources" },
-            { label: "Guides", path: "/resources" },
-            { label: "FAQ", path: "/resources" }
+            // { label: "Guides", path: "/resources" },
+            // { label: "FAQ", path: "/resources" }
         ]
     };
 

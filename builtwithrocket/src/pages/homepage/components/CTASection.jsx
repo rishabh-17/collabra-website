@@ -8,17 +8,17 @@ const CTASection = () => {
         {
             id: 1,
             icon: "CheckCircle2",
-            text: "Free discovery call with no obligations"
+            text: "We review your current systems and challenges"
         },
         {
             id: 2,
             icon: "CheckCircle2",
-            text: "Detailed project scoping and estimation"
+            text: "We identify where risk, friction, or unnecessary complexity exists"
         },
         {
             id: 3,
             icon: "CheckCircle2",
-            text: "Expert recommendations tailored to your needs"
+            text: "You receive an honest recommendation — even if that means doing less"
         }
     ];
 
@@ -30,18 +30,21 @@ const CTASection = () => {
                         <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4 md:mb-6 w-fit">
                                 <Icon name="Sparkles" size={20} color="#2FA4A9" />
-                                <span className="text-sm md:text-base font-semibold text-white">Start Your Journey</span>
+                                <span className="text-sm md:text-base font-semibold text-white">System Stability & Automation Audit</span>
                             </div>
 
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
-                                Ready to Overcome Your Technology Challenges?
+                                Not Sure If Your Systems Are Helping or Holding You Back?
                             </h2>
 
                             <p className="text-base md:text-lg text-white/90 mb-6 md:mb-8 leading-relaxed">
-                                Let's discuss how we can help you transform system constraints into growth opportunities. Schedule a free discovery call to explore solutions tailored to your business needs.
+                                If your software or AI systems are starting to feel like a constraint instead of a support, we can help you get clarity.
                             </p>
 
                             <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                                <p className="text-sm md:text-base font-semibold text-white/90">
+                                    What Happens Next
+                                </p>
                                 {benefits?.map((benefit) => (
                                     <div key={benefit?.id} className="flex items-center space-x-3">
                                         <div className="w-6 h-6 bg-[#2FA4A9] rounded-full flex items-center justify-center flex-shrink-0">
@@ -52,7 +55,7 @@ const CTASection = () => {
                                 ))}
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                                 <Button
                                     variant="default"
                                     size="lg"
@@ -67,18 +70,11 @@ const CTASection = () => {
                                     iconPosition="left"
                                     className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white shadow-elevated"
                                 >
-                                    Schedule Discovery Call
+                                    Request a Free System Stability & Automation Audit
                                 </Button>
-                                <Button
-                                    variant="outline"
-                                    size="lg"
-                                    onClick={() => navigate('/case-studies')}
-                                    iconName="FileText"
-                                    iconPosition="left"
-                                    className="border-white/30 text-white hover:bg-white/10"
-                                >
-                                    View Case Studies
-                                </Button>
+                                <p className="text-xs md:text-sm text-white/80">
+                                    Best for teams with existing systems and something to lose if they fail.
+                                </p>
                             </div>
                         </div>
 

@@ -6,22 +6,27 @@ const CompanyOverview = () => {
         {
             id: 1,
             icon: "AlertCircle",
-            text: "Processes become manual."
+            text: "Manual processes creeping back in as volume increases"
         },
         {
             id: 2,
             icon: "Link2Off",
-            text: "Tools don't integrate."
+            text: "Tools that don’t integrate cleanly or share reliable data"
         },
         {
             id: 3,
-            icon: "Database",
-            text: "Data is hard to trust."
+            icon: "AlertCircle",
+            text: "Systems no one wants to touch for fear of breaking them"
         },
         {
             id: 4,
-            icon: "Cpu", // Represents AI/Chip
-            text: "AI feels promising, but unclear."
+            icon: "Database",
+            text: "Reporting that feels inconsistent or hard to trust"
+        },
+        {
+            id: 5,
+            icon: "Cpu",
+            text: "AI initiatives that sound promising but never quite deliver"
         }
     ];
 
@@ -31,10 +36,13 @@ const CompanyOverview = () => {
                 {/* Header Section */}
                 <div className="text-center mb-8 md:mb-12 lg:mb-16">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0D2A4A] leading-tight mb-4">
-                        When Systems Stop Supporting Growth, <span className="text-[#2FA4A9]">Everything<br className="hidden md:block" /> Slows Down</span>
+                        When Systems Stop Supporting Growth, <span className="text-[#2FA4A9]">Everything Slows Down</span>
                     </h2>
+                    <p className="text-base md:text-lg text-[#4A5568] max-w-3xl mx-auto leading-relaxed mb-4">
+                        Most teams don’t struggle because of ambition or effort. They struggle because the systems they rely on weren’t designed to grow with the business.
+                    </p>
                     <p className="text-base md:text-lg text-[#4A5568] max-w-3xl mx-auto leading-relaxed">
-                        Many businesses reach a point where progress stalls; not because of a lack of ambition, but because their systems can't keep up.
+                        Left unchecked, these problems compound: increasing risk, slowing teams, and making every change more expensive.
                     </p>
                 </div>
 
@@ -58,7 +66,7 @@ const CompanyOverview = () => {
                 {/* Bottom Text */}
                 <div className="text-center">
                     <p className="text-base md:text-lg text-[#4A5568] max-w-3xl mx-auto leading-relaxed">
-                        We help teams regain momentum by designing software and AI systems that bring clarity, reliability, and structure back into day-to-day operations — without introducing unnecessary complexity.
+                        We help teams regain control by fixing foundations first, then applying automation and AI only where it makes real operational sense.
                     </p>
                 </div>
             </div>

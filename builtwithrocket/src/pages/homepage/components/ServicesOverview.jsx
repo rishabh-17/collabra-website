@@ -1,41 +1,71 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const ServicesOverviewSection = () => {
+    const { openDrawer } = useContactDrawer();
 
     const services = [
         {
             id: 1,
             icon: "Code2",
-            title: "Custom Software Development",
-            description: "Tailored solutions that align with your business processes and scale with your growth.",
-            features: ["Web Applications", "Mobile Apps", "Enterprise Systems"],
+            title: "Stabilize & Modernize Core Software",
+            description: "We design, rebuild, and modernize internal and customer-facing systems that teams rely on daily — with an emphasis on reliability, clarity, and long-term maintainability.",
+            features: [
+                "Internal and customer-facing systems",
+                "Modernization without unnecessary rewrites",
+                "Reliability as a core requirement"
+            ],
             color: "#0D2A4A"
         },
         {
             id: 2,
-            icon: "Workflow",
-            title: "System Integration",
-            description: "Seamless connectivity across platforms, eliminating data silos and manual workflows.",
-            features: ["API Development", "Legacy Modernization", "Cloud Migration"],
+            icon: "Shield",
+            title: "Architecture & System Foundations",
+            description: "We address weak architecture early so platforms scale cleanly, perform predictably, and don’t require constant rewrites as usage grows.",
+            features: [
+                "Scale-ready foundations",
+                "Performance under real-world load",
+                "Reduced rework over time"
+            ],
             color: "#2FA4A9"
         },
         {
             id: 3,
-            icon: "Brain",
-            title: "AI & Machine Learning",
-            description: "Practical AI implementation that delivers measurable business value and ROI.",
-            features: ["Process Automation", "Predictive Analytics", "Natural Language Processing"],
+            icon: "Workflow",
+            title: "Integration & Automation",
+            description: "We connect fragmented tools, streamline data flows, and remove manual handoffs that slow operations and introduce risk.",
+            features: [
+                "Connected tools and data",
+                "Reduced manual handoffs",
+                "More reliable operations"
+            ],
             color: "#0D2A4A"
         },
         {
             id: 4,
-            icon: "Shield",
-            title: "Security & Compliance",
-            description: "Enterprise-grade security measures and regulatory compliance built into every solution.",
-            features: ["Security Audits", "Compliance Management", "Data Protection"],
+            icon: "Brain",
+            title: "Practical AI (When It Earns Its Place)",
+            description: "We apply AI for intelligent recommendations and matching, automation of repetitive or error-prone workflows, and decision support built on trustworthy data. No hype. No black boxes.",
+            features: [
+                "Intelligent recommendations and matching",
+                "Automation of repetitive or error-prone work",
+                "Decision support built on reliable data"
+            ],
             color: "#2FA4A9"
+        },
+        {
+            id: 5,
+            icon: "Users",
+            title: "Ongoing Support & Evolution",
+            description: "We stay involved after launch, supporting, improving, and evolving systems as the business grows.",
+            features: [
+                "Post-launch support",
+                "Continuous improvements",
+                "Systems that grow with the business"
+            ],
+            color: "#0D2A4A"
         }
     ];
 
@@ -45,13 +75,13 @@ const ServicesOverviewSection = () => {
                 <div className="text-center mb-8 md:mb-12 lg:mb-16">
                     <div className="inline-flex items-center space-x-2 bg-[#2FA4A9]/10 px-4 py-2 rounded-full mb-4">
                         <Icon name="Zap" size={20} color="#2FA4A9" />
-                        <span className="text-sm md:text-base font-semibold text-[#0D2A4A]">Our Services</span>
+                        <span className="text-sm md:text-base font-semibold text-[#0D2A4A]">What We Do</span>
                     </div>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0D2A4A] mb-3 md:mb-4">
-                        Comprehensive Technology Solutions
+                        What We Help Teams Fix
                     </h2>
                     <p className="text-base md:text-lg text-[#4A5568] max-w-3xl mx-auto">
-                        From custom development to AI integration, we deliver solutions that solve real business problems
+                        We stabilize and modernize core systems, strengthen architecture, connect tools, and apply AI only where it earns its place.
                     </p>
                 </div>
 
@@ -101,18 +131,12 @@ const ServicesOverviewSection = () => {
                     <Button
                         variant="default"
                         size="lg"
-                        onClick={() =>
-                            window.open(
-                                "https://calendly.com/williammwakaa",
-                                "_blank",
-                                "noopener,noreferrer"
-                            )
-                        }
-                        iconName="MessageSquare"
+                        onClick={openDrawer}
+                        iconName="CheckCircle2"
                         iconPosition="left"
                         className="bg-[#0D2A4A] hover:bg-[#0D2A4A]/90 text-white"
                     >
-                        Discuss Your Project
+                        Get a Free System Stability &amp; Automation Audit
                     </Button>
                 </div>
             </div>

@@ -2,9 +2,11 @@ import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const HeroSection = () => {
     const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+    const { openDrawer } = useContactDrawer();
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#063453]">
@@ -25,32 +27,29 @@ const HeroSection = () => {
                     <span className="text-[#2FA4A9]">Real Business Needs</span>
                 </h1>
                 <p
-                    className={`text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed ${isVisible ? 'animate-fade-up animation-delay-200' : 'opacity-0'
+                    className={`text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-6 leading-relaxed ${isVisible ? 'animate-fade-up animation-delay-200' : 'opacity-0'
                         }`}
                 >
-                    Collabrah Tech partners with growing businesses to design, build, and support reliable software and
-                    AI-powered systems, with clear communication, steady delivery, and long-term accountability.
+                    We help growing businesses fix, stabilize, and modernize business-critical software systems before
+                    instability, manual work, or bad architecture becomes expensive.
                 </p>
                 <div className={isVisible ? 'animate-fade-up animation-delay-400' : 'opacity-0'}>
                     <Button
-                        asChild
                         size="lg"
+                        onClick={openDrawer}
                         className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-[#041B2E] text-lg px-8 py-6 rounded-lg group shadow-elevated"
                     >
-                        <a
-                            href="https://calendly.com/williammwakaa"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Schedule a Discovery Call
-                            <Icon
-                                name="ArrowRight"
-                                size={20}
-                                color="#041B2E"
-                                className="ml-2 group-hover:translate-x-1 transition-transform"
-                            />
-                        </a>
+                        Get a Free System Stability &amp; Automation Audit
+                        <Icon
+                            name="ArrowRight"
+                            size={20}
+                            color="#041B2E"
+                            className="ml-2 group-hover:translate-x-1 transition-transform"
+                        />
                     </Button>
+                    <p className="mt-3 text-sm md:text-base text-white/80">
+                        No pitches. No pressure. Just clarity from senior engineers.
+                    </p>
                 </div>
             </div>
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
