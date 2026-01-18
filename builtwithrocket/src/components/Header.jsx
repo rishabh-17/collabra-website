@@ -92,7 +92,13 @@ const Header = () => {
                     {/* Desktop CTA Button */}
                     <div className="hidden md:flex items-center gap-3">
                         <Button
-                            onClick={openDrawer}
+                            onClick={() =>
+                                window.open(
+                                    "https://calendly.com/williammwakaa",
+                                    "_blank",
+                                    "noopener,noreferrer"
+                                )
+                            }
                             className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-medium rounded-lg px-6 py-2.5 shadow-lg border-0"
                         >
                             Schedule a Call
@@ -133,7 +139,11 @@ const Header = () => {
                             <Button
                                 fullWidth
                                 onClick={() => {
-                                    openDrawer();
+                                    window.open(
+                                        "https://calendly.com/williammwakaa",
+                                        "_blank",
+                                        "noopener,noreferrer"
+                                    );
                                     setIsMobileMenuOpen(false);
                                 }}
                                 className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-medium justify-center py-3"

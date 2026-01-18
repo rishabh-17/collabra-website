@@ -16,10 +16,8 @@ import {
 import Header from "../components/Header";
 import FooterSection from "./homepage/components/FooterSection";
 import Button from "components/ui/Button";
-import { useContactDrawer } from "../components/ContactDrawerProvider";
 
 const Services = () => {
-    const { openDrawer } = useContactDrawer();
     const fadeUp = {
         hidden: { opacity: 0, y: 18 },
         visible: { opacity: 1, y: 0 },
@@ -476,7 +474,13 @@ const Services = () => {
                                     <div className="mt-6">
                                         <Button
                                             size="lg"
-                                            onClick={openDrawer}
+                                            onClick={() =>
+                                                window.open(
+                                                    "https://calendly.com/williammwakaa",
+                                                    "_blank",
+                                                    "noopener,noreferrer"
+                                                )
+                                            }
                                             className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-semibold px-6 py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
                                         >
                                             Schedule a Discovery Call <ArrowRight className="h-5 w-5" />

@@ -11,11 +11,9 @@ import {
 import Header from "../components/Header";
 import FooterSection from "./homepage/components/FooterSection";
 import Button from "components/ui/Button";
-import { useContactDrawer } from "../components/ContactDrawerProvider";
 
 const CaseStudies = () => {
     const navigate = useNavigate();
-    const { openDrawer } = useContactDrawer();
 
     // ✅ Dummy images (Unsplash) - premium looking
     const images = [
@@ -263,7 +261,13 @@ const CaseStudies = () => {
                                 <div className="flex flex-col sm:flex-row gap-3">
                                     <Button
                                         size="lg"
-                                        onClick={openDrawer}
+                                        onClick={() =>
+                                            window.open(
+                                                "https://calendly.com/williammwakaa",
+                                                "_blank",
+                                                "noopener,noreferrer"
+                                            )
+                                        }
                                         className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-semibold px-6 py-3 rounded-xl shadow-md"
                                     >
                                         Schedule a Discovery Call

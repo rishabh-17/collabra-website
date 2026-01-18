@@ -2,11 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
-import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const ValuePropositionSection = () => {
     const navigate = useNavigate();
-    const { openDrawer } = useContactDrawer();
 
     const valueProps = [
         {
@@ -107,7 +105,13 @@ const ValuePropositionSection = () => {
                         <Button
                             variant="default"
                             size="lg"
-                            onClick={openDrawer}
+                            onClick={() =>
+                                window.open(
+                                    "https://calendly.com/williammwakaa",
+                                    "_blank",
+                                    "noopener,noreferrer"
+                                )
+                            }
                             iconName="Calendar"
                             iconPosition="left"
                             className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white shadow-elevated"

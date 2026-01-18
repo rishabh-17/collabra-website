@@ -1,10 +1,8 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
-import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const ServicesOverviewSection = () => {
-    const { openDrawer } = useContactDrawer();
 
     const services = [
         {
@@ -103,7 +101,13 @@ const ServicesOverviewSection = () => {
                     <Button
                         variant="default"
                         size="lg"
-                        onClick={openDrawer}
+                        onClick={() =>
+                            window.open(
+                                "https://calendly.com/williammwakaa",
+                                "_blank",
+                                "noopener,noreferrer"
+                            )
+                        }
                         iconName="MessageSquare"
                         iconPosition="left"
                         className="bg-[#0D2A4A] hover:bg-[#0D2A4A]/90 text-white"

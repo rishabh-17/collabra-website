@@ -2,10 +2,8 @@ import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
-import { useContactDrawer } from '../../../components/ContactDrawerProvider';
 
 const HeroSection = () => {
-    const { openDrawer } = useContactDrawer();
     const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
     return (
@@ -40,11 +38,9 @@ const HeroSection = () => {
                         className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-[#041B2E] text-lg px-8 py-6 rounded-lg group shadow-elevated"
                     >
                         <a
-                            href="#contact"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                openDrawer();
-                            }}
+                            href="https://calendly.com/williammwakaa"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Schedule a Discovery Call
                             <Icon

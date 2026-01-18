@@ -323,6 +323,13 @@ const CaseStudyQualifyde = () => {
                                         <div className="mt-6">
                                             <Button
                                                 size="lg"
+                                                onClick={() =>
+                                                    window.open(
+                                                        "https://calendly.com/williammwakaa",
+                                                        "_blank",
+                                                        "noopener,noreferrer"
+                                                    )
+                                                }
                                                 className="w-full bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-semibold px-6 py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
                                             >
                                                 Schedule a Discovery Call <ArrowRight className="h-5 w-5" />
@@ -364,6 +371,13 @@ const CaseStudyQualifyde = () => {
                                     <div className="mt-6 flex flex-col sm:flex-row gap-3">
                                         <Button
                                             size="lg"
+                                            onClick={() =>
+                                                window.open(
+                                                    "https://calendly.com/williammwakaa",
+                                                    "_blank",
+                                                    "noopener,noreferrer"
+                                                )
+                                            }
                                             className="bg-[#2FA4A9] hover:bg-[#2FA4A9]/90 text-white font-semibold px-6 py-3 rounded-xl shadow-md"
                                         >
                                             Schedule a Discovery Call
