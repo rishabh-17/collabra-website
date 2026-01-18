@@ -105,7 +105,7 @@ const ServicesOverviewSection = () => {
                                 </div>
                             </div>
 
-                            <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                            <div className="space-y-2 md:space-y-3">
                                 {service?.features?.map((feature, idx) => (
                                     <div key={idx} className="flex items-center space-x-2">
                                         <div className="w-1.5 h-1.5 rounded-full bg-[#2FA4A9] flex-shrink-0"></div>
@@ -113,16 +113,6 @@ const ServicesOverviewSection = () => {
                                     </div>
                                 ))}
                             </div>
-
-                            <Button
-                                variant="ghost"
-                                size="sm"
-                                iconName="ArrowRight"
-                                iconPosition="right"
-                                className="text-[#2FA4A9] hover:text-[#0D2A4A] p-0"
-                            >
-                                Learn More
-                            </Button>
                         </div>
                     ))}
                 </div>

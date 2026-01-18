@@ -11,7 +11,7 @@ const FooterSection = () => {
     const footerLinks = {
         company: [
             { label: "About Us", path: "/about" },
-            { label: "Our Approach", path: "/approach" },
+            { label: "Services", path: "/services" },
             { label: "Case Studies", path: "/case-studies" },
             { label: "Contact", path: "/contact" }
         ],
@@ -23,17 +23,33 @@ const FooterSection = () => {
         ],
         resources: [
             { label: "Blog", path: "/resources" },
-            { label: "Insights", path: "/resources" },
+            { label: "Insights", path: "/insights" },
             // { label: "Guides", path: "/resources" },
             // { label: "FAQ", path: "/resources" }
         ]
     };
 
     const socialLinks = [
-        { icon: "Linkedin", url: "https://linkedin.com", label: "LinkedIn" },
-        { icon: "Twitter", url: "https://twitter.com", label: "Twitter" },
-        { icon: "Github", url: "https://github.com", label: "GitHub" },
-        { icon: "Mail", url: "mailto:contact@collabrahtech.com", label: "Email" }
+        {
+            icon: "Facebook",
+            url: "https://www.facebook.com/people/Collabrah-Tech-Solutions/61578708812529/",
+            label: "Facebook"
+        },
+        {
+            icon: "Twitter",
+            url: "https://x.com/collabrahtech",
+            label: "X (Twitter)"
+        },
+        {
+            icon: "Linkedin",
+            url: "https://www.linkedin.com/company/collabrahtech/",
+            label: "LinkedIn"
+        },
+        {
+            icon: "Instagram",
+            url: "https://www.instagram.com/collabrah_tech_solutions/",
+            label: "Instagram"
+        }
     ];
 
     return (
