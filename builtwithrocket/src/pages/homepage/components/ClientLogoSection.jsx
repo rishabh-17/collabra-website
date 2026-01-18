@@ -26,7 +26,7 @@ const ClientLogoSection = () => {
         {
             id: 4,
             name: "Nike",
-            logo: "https://img.rocket.new/generatedImages/rocket_gen_img_152fa38ce-1767958497829.png",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
             logoAlt: "Nike swoosh logo in black representing athletic footwear and sportswear innovation"
         },
         {
@@ -43,9 +43,9 @@ const ClientLogoSection = () => {
         },
         {
             id: 7,
-            name: "Volkswagen",
-            logo: "https://img.rocket.new/generatedImages/rocket_gen_img_100856c01-1765201822186.png",
-            logoAlt: "Volkswagen automotive logo featuring iconic VW emblem in blue and white representing German engineering"
+            name: "Ooredoo",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Ooredoo_Logo_Red_on_Transparent_Bg_RGB.png",
+            logoAlt: "Ooredoo telecommunications company logo with distinctive red circles branding"
         },
         {
             id: 8,
@@ -66,7 +66,7 @@ const ClientLogoSection = () => {
                         Trusted by teams building and operating business-critical systems
                     </h2>
                     <p className="text-base md:text-lg text-[#4A5568] max-w-2xl mx-auto">
-                        Microsoft · SAP · Thomson Reuters · Nike · AT&amp;T · Telefónica · Volkswagen · Obopay
+                        Microsoft · SAP · Thomson Reuters · Nike · AT&amp;T · Telefónica · Ooredoo · Obopay
                     </p>
                 </div>
 
@@ -83,7 +83,7 @@ const ClientLogoSection = () => {
                                 <Image
                                     src={client?.logo}
                                     alt={client?.logoAlt}
-                                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" />
+                                    className={`w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300 ${client?.name === "Nike" ? "scale-75" : ""}`} />
 
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-br from-[#2FA4A9]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
