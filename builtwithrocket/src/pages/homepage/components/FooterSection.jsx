@@ -16,10 +16,11 @@ const FooterSection = () => {
             { label: "Contact", path: "/contact" }
         ],
         services: [
-            { label: "Custom Development", path: "/services" },
-            { label: "System Integration", path: "/services" },
-            { label: "AI Solutions", path: "/services" },
-            { label: "Security & Compliance", path: "/services" }
+            { label: "Stabilize & Modernize", path: "/services/software-modernization" },
+            { label: "Architecture Foundations", path: "/services/system-architecture" },
+            { label: "Integration & Automation", path: "/services/integration-automation" },
+            { label: "Practical AI", path: "/services/practical-ai" },
+            { label: "Ongoing Support", path: "/services/ongoing-support" }
         ],
         resources: [
             { label: "Blog", path: "/resources" },

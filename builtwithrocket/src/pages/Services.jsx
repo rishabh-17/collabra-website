@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
     ArrowRight,
     Layers,
@@ -36,6 +37,7 @@ const Services = () => {
     const services = [
         {
             title: "Custom Software Development",
+            link: "/services/software-modernization",
             icon: Layers,
             image: images.software,
             intro:
@@ -50,6 +52,7 @@ const Services = () => {
         },
         {
             title: "AI and Intelligent Systems",
+            link: "/services/practical-ai",
             icon: Bot,
             image: images.ai,
             intro:
@@ -64,6 +67,7 @@ const Services = () => {
         },
         {
             title: "System Architecture & Foundations",
+            link: "/services/system-architecture",
             icon: ShieldCheck,
             image: images.architecture,
             intro: "Many software problems start with weak foundations. We help you build systems that last.",
@@ -77,6 +81,7 @@ const Services = () => {
         },
         {
             title: "Integration and Automation",
+            link: "/services/integration-automation",
             icon: PlugZap,
             image: images.automation,
             intro:
@@ -90,6 +95,7 @@ const Services = () => {
         },
         {
             title: "Ongoing Support and Evolution",
+            link: "/services/ongoing-support",
             icon: Wrench,
             image: images.support,
             intro: "Software doesn’t stand still — and neither do we. We help your systems stay stable as they evolve.",
@@ -284,9 +290,11 @@ const Services = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="p-6 md:p-7">
+                                            <div className="p-6 md:p-7 flex flex-col h-full">
                                                 <h3 className="text-lg md:text-xl font-extrabold text-[#0D2A4A]">
-                                                    {s.title}
+                                                    <Link to={s.link} className="hover:text-[#2FA4A9] transition-colors">
+                                                        {s.title}
+                                                    </Link>
                                                 </h3>
 
                                                 <p className="mt-2 text-sm md:text-base text-[#4A5568]">
@@ -307,11 +315,18 @@ const Services = () => {
                                                     ))}
                                                 </div>
 
-                                                <p className="mt-4 text-sm md:text-base text-[#4A5568]">
+                                                <p className="mt-4 text-sm md:text-base text-[#4A5568] flex-grow">
                                                     {s.footer}
                                                 </p>
 
-                                                <div className="mt-5 h-[2px] w-full bg-gradient-to-r from-[#2FA4A9]/0 via-[#2FA4A9]/35 to-[#2FA4A9]/0 opacity-0 group-hover:opacity-100 transition" />
+                                                <div className="mt-6 pt-4 border-t border-gray-100">
+                                                    <Link
+                                                        to={s.link}
+                                                        className="inline-flex items-center gap-2 text-[#2FA4A9] font-bold hover:gap-3 transition-all"
+                                                    >
+                                                        Learn more <ArrowRight className="h-4 w-4" />
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     );

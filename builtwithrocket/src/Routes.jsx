@@ -17,6 +17,11 @@ import CaseStudyNetEnforcers from "./pages/CaseStudyNetEnforcers";
 import CaseStudyMcmTours from "./pages/CaseStudyMcmTours";
 import CaseStudyHemaMetrics from "./pages/CaseStudyHemaMetrics";
 import Insights from "./pages/Insights";
+import SoftwareModernization from "./pages/services/SoftwareModernization";
+import SystemArchitecture from "./pages/services/SystemArchitecture";
+import IntegrationAutomation from "./pages/services/IntegrationAutomation";
+import PracticalAI from "./pages/services/PracticalAI";
+import OngoingSupport from "./pages/services/OngoingSupport";
 
 const Routes = () => {
     return (
@@ -28,6 +33,11 @@ const Routes = () => {
                     <Route path="/homepage" element={<Homepage />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/services/software-modernization" element={<SoftwareModernization />} />
+                    <Route path="/services/system-architecture" element={<SystemArchitecture />} />
+                    <Route path="/services/integration-automation" element={<IntegrationAutomation />} />
+                    <Route path="/services/practical-ai" element={<PracticalAI />} />
+                    <Route path="/services/ongoing-support" element={<OngoingSupport />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/insights" element={<Insights />} />
                     <Route path="/case-studies" element={<CaseStudies />} />
