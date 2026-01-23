@@ -22,6 +22,9 @@ import SystemArchitecture from "./pages/services/SystemArchitecture";
 import IntegrationAutomation from "./pages/services/IntegrationAutomation";
 import PracticalAI from "./pages/services/PracticalAI";
 import OngoingSupport from "./pages/services/OngoingSupport";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsConditions from "./pages/legal/TermsConditions";
+import CookiePolicy from "./pages/legal/CookiePolicy";
 
 const Routes = () => {
     return (
@@ -49,6 +52,9 @@ const Routes = () => {
                     <Route path="/case-studies/netenforcers" element={<CaseStudyNetEnforcers />} />
                     <Route path="/case-studies/mcm-tours" element={<CaseStudyMcmTours />} />
                     <Route path="/case-studies/hema-metrics" element={<CaseStudyHemaMetrics />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/terms-and-conditions" element={<TermsConditions />} />
+                    <Route path="/cookie-policy" element={<CookiePolicy />} />
                     <Route path="*" element={<NotFound />} />
                 </RouterRoutes>
             </ErrorBoundary>

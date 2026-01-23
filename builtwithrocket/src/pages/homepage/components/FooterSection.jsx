@@ -58,11 +58,8 @@ const FooterSection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-12 mb-8 md:mb-12">
                     <div className="lg:col-span-2">
-                        <div className="flex items-center space-x-2 mb-4 md:mb-6">
-                            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#0D2A4A] to-[#2FA4A9]">
-                                <Icon name="Code2" size={24} color="#FFFFFF" />
-                            </div>
-                            <span className="text-xl font-bold">Collabrah Tech</span>
+                        <div className="mb-4 md:mb-6">
+                            <img src="/assets/images/logo.png" alt="Collabrah Tech" className="h-24 w-auto" />
                         </div>
                         <p className="text-sm md:text-base text-white/70 mb-4 md:mb-6 leading-relaxed">
                             Your trusted technology partner for dependable innovation. We transform system constraints into growth opportunities through problem-first thinking and practical AI solutions.
@@ -144,13 +141,22 @@ const FooterSection = () => {
                             &copy; {currentYear} Collabrah Tech. All rights reserved.
                         </p>
                         <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-                            <button className="text-xs md:text-sm text-white/60 hover:text-[#2FA4A9] transition-colors duration-300">
+                            <button
+                                onClick={() => navigate('/privacy-policy')}
+                                className="text-xs md:text-sm text-white/60 hover:text-[#2FA4A9] transition-colors duration-300"
+                            >
                                 Privacy Policy
                             </button>
-                            <button className="text-xs md:text-sm text-white/60 hover:text-[#2FA4A9] transition-colors duration-300">
+                            <button
+                                onClick={() => navigate('/terms-and-conditions')}
+                                className="text-xs md:text-sm text-white/60 hover:text-[#2FA4A9] transition-colors duration-300"
+                            >
                                 Terms of Service
                             </button>
-                            <button className="text-xs md:text-sm text-white/60 hover:text-[#2FA4A9] transition-colors duration-300">
+                            <button
+                                onClick={() => navigate('/cookie-policy')}
+                                className="text-xs md:text-sm text-white/60 hover:text-[#2FA4A9] transition-colors duration-300"
+                            >
                                 Cookie Policy
                             </button>
                         </div>

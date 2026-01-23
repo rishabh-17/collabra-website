@@ -69,9 +69,7 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo Section */}
                     <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => handleNavigation('/')}>
-                        <span className="text-2xl font-bold text-white tracking-tight">
-                            Collabrah<span className="text-[#2FA4A9]">Tech</span>
-                        </span>
+                        <img src="/assets/images/logo.png" alt="Collabrah Tech" className="h-8 md:h-10 w-auto" />
                     </div>
 
                     {/* Desktop Navigation */}

@@ -320,8 +320,8 @@ const Services = () => {
                                                 </p>
 
                                                 <div className="mt-6 pt-4 border-t border-gray-100">
-                                                    <Link
-                                                        to={s.link}
+                                                    <Link 
+                                                        to={s.link} 
                                                         className="inline-flex items-center gap-2 text-[#2FA4A9] font-bold hover:gap-3 transition-all"
                                                     >
                                                         Learn more <ArrowRight className="h-4 w-4" />
