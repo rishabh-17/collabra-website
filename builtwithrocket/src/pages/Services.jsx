@@ -26,12 +26,12 @@ const Services = () => {
 
     const images = {
         hero: "https://picsum.photos/seed/services-hero/1900/900",
-        software: "https://picsum.photos/seed/services-software/1600/900",
-        ai: "https://picsum.photos/seed/services-ai/1600/900",
-        architecture: "https://picsum.photos/seed/services-architecture/1600/900",
-        automation: "https://picsum.photos/seed/services-automation/1600/900",
-        support: "https://picsum.photos/seed/services-support/1600/900",
-        cta: "https://picsum.photos/seed/services-cta/1600/900",
+        software: "/assets/images/blocks.jpeg",
+        ai: "https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        architecture: "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg",
+        automation: "https://images.pexels.com/photos/256219/pexels-photo-256219.jpeg",
+        support: "https://images.pexels.com/photos/12899151/pexels-photo-12899151.jpeg",
+        cta: "https://images.pexels.com/photos/7709257/pexels-photo-7709257.jpeg",
     };
 
     const services = [
@@ -320,8 +320,8 @@ const Services = () => {
                                                 </p>
 
                                                 <div className="mt-6 pt-4 border-t border-gray-100">
-                                                    <Link 
-                                                        to={s.link} 
+                                                    <Link
+                                                        to={s.link}
                                                         className="inline-flex items-center gap-2 text-[#2FA4A9] font-bold hover:gap-3 transition-all"
                                                     >
                                                         Learn more <ArrowRight className="h-4 w-4" />

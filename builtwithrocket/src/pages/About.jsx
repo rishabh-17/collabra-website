@@ -15,9 +15,9 @@ import Button from "../components/ui/Button";
 const About = () => {
     // ✅ Dummy images (Unsplash)
     const images = {
-        hero: "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=1200&q=80",
+        hero: "https://images.pexels.com/photos/7213210/pexels-photo-7213210.jpeg",
         stability:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+            "https://images.pexels.com/photos/10981242/pexels-photo-10981242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         partnership:
             "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
     };
