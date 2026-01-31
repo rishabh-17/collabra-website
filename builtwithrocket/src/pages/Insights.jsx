@@ -22,11 +22,11 @@ const Insights = () => {
 
     const images = {
         hero: "https://picsum.photos/seed/insights-hero/1900/900",
-        reliability: "https://picsum.photos/seed/insights-reliability/1200/800",
-        automation: "https://picsum.photos/seed/insights-automation/1200/800",
-        ai: "https://picsum.photos/seed/insights-ai/1200/800",
-        architecture: "https://picsum.photos/seed/insights-architecture/1200/800",
-        cta: "https://picsum.photos/seed/insights-cta/1600/900",
+        reliability: "https://images.pexels.com/photos/4399366/pexels-photo-4399366.jpeg",
+        automation: "https://images.pexels.com/photos/11743789/pexels-photo-11743789.jpeg",
+        ai: "https://images.pexels.com/photos/30855414/pexels-photo-30855414.jpeg",
+        architecture: "https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg",
+        cta: "https://images.pexels.com/photos/7580908/pexels-photo-7580908.jpeg",
     };
 
     const featuredTopics = [

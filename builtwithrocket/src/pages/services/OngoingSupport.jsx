@@ -28,12 +28,12 @@ const OngoingSupport = () => {
 
     const images = {
         hero: "https://picsum.photos/seed/service-support-hero/1900/900",
-        problem: "https://picsum.photos/seed/service-support-problem/1600/1000",
-        method: "https://picsum.photos/seed/service-support-method/1600/1000",
-        scope: "https://picsum.photos/seed/service-support-scope/1600/1000",
-        case: "https://picsum.photos/seed/service-support-case/1600/1000",
+        problem: "https://images.pexels.com/photos/14000467/pexels-photo-14000467.jpeg",
+        method: "https://images.pexels.com/photos/12899162/pexels-photo-12899162.jpeg",
+        scope: "https://images.pexels.com/photos/34212963/pexels-photo-34212963.jpeg",
+        case: "https://images.pexels.com/photos/261909/pexels-photo-261909.jpeg",
         testimonials: "https://picsum.photos/seed/service-support-testimonials/1600/900",
-        cta: "https://picsum.photos/seed/service-support-cta/1600/900",
+        cta: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
     };
 
     const logos = ["Microsoft", "Nike", "AT&T", "Thomson Reuters"];
