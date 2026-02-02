@@ -102,7 +102,7 @@ const Contact = ({ isOpen, onClose }) => {
                     <p className="text-xs text-[#4A5568] text-center">
                         Or reach us at{" "}
                         <a
-                            href="mailto:contact@collabrahtech.com"
+                            href="mailto:will@collabrahtech.com"
                             className="font-semibold text-[#0D2A4A]"
                         >
                             contact@collabrahtech.com
